@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NajotTalimUoW.Domain.Localization
+﻿namespace NajotTalimUoW.Domain.Localization
 {
     public interface ILocalizationName
     {

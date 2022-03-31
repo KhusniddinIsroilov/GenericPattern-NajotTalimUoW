@@ -8,9 +8,6 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NajotTalimUoW.Domain.Entities.Groups
 {
@@ -19,7 +16,7 @@ namespace NajotTalimUoW.Domain.Entities.Groups
 
     {
         public Guid Id { get; set; }
-        
+
         [NotMapped]
         public string Name { get; set; }
         public Guid TeacherId { get; set; }
@@ -30,9 +27,9 @@ namespace NajotTalimUoW.Domain.Entities.Groups
 
         [ForeignKey(nameof(CourseId))]
         public Course Course { get; set; }
-        public DateTime CreateAt { get; set; }
-        public DateTime? UpdateAt { get; set; }
-        public DateTime? UpdateBy { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? UpdatedBy { get; set; }
         public ItemState State { get; set; }
         public virtual ICollection<Student> Students { get; set; }
 
@@ -43,6 +40,6 @@ namespace NajotTalimUoW.Domain.Entities.Groups
         public string NameRu { get; set; }
 
         [JsonIgnore]
-        public string NameEng { get ; set; }
+        public string NameEng { get; set; }
     }
 }

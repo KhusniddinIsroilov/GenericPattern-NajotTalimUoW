@@ -3,11 +3,7 @@ using NajotTalimUoW.Domain.Enums;
 using NajotTalimUoW.Domain.Localization;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NajotTalimUoW.Domain.Entities.Courses
 {
@@ -27,9 +23,9 @@ namespace NajotTalimUoW.Domain.Entities.Courses
         [JsonIgnore]
         public string NameEng { get; set; }
 
-        public DateTime CreateAt { get; set; }
-        public DateTime? UpdateAt { get; set; }
-        public DateTime? UpdateBy { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? UpdatedBy { get; set; }
         public ItemState State { get; set; }
     }
 }
